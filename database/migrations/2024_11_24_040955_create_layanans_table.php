@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('tipe_paket');
             $table->integer('harga_paket');
             $table->text('deskripsi');
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }
