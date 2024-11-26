@@ -26,8 +26,6 @@ class CustomerResource extends Resource
 
     protected static ?string $navigationLabel = 'Customer';
 
-    protected static ?string $navigationGroup = 'Customer';
-
     public static function form(Form $form): Form
     {
         return $form

@@ -6,7 +6,8 @@
 
 <section class="bg-light py-5">
     <div class="container">
-        <h1 class="display-4 text-center mb-5" data-aos="fade-down" data-aos-duration="1000">Layanan Kami</h1>
+        <h1 class="display-4 text-center" data-aos="fade-down" data-aos-duration="1000">Layanan Kami</h1>
+        <p class="text-center mt-2 mb-5">Temukan layanan fotografi yang sesuai dengan kebutuhan Anda. Jadikan momen spesial Anda terekam dengan profesionalisme dan kreativitas kami. Temukan penawaran terbaik untuk kebutuhan fotografi Anda.</p>
         <div class="row" data-aos="fade-down" data-aos-duration="1000">
             @foreach ($layanans as $layanan)
             <div class="col-md-4 mb-4">
@@ -33,9 +34,9 @@
             <a href="{{ route('contact.us') }}" class="btn btn-primary btn-lg d-flex align-items-center">
                 <i class="bi bi-chat-dots me-2"></i> Hubungi Kami
             </a>
-            <a href="{{ route('layanan') }}" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
+            <!-- <a href="{{ route('layanan') }}" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
                 <i class="bi bi-search me-2"></i> Jelajahi Layanan
-            </a>
+            </a> -->
         </div>
         <img src="{{ asset('images/services.png') }}" class="img-fluid rounded mt-4" alt="Layanan Kami" style="max-width: 40%;">
     </div>

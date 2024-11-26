@@ -129,7 +129,7 @@
                 let count = 0;
                 const targetValue = counter.getAttribute('data-count');
                 const target = parseInt(targetValue.replace(/\D/g, ''));
-                const speed = 200;
+                const speed = 500;
                 const type = counter.getAttribute('data-type');
 
                 const formatValue = (value) => {
