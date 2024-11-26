@@ -7,21 +7,21 @@
 <section class="bg-light py-5">
     <div class="container">
         <h1 class="display-4 text-center mb-5" data-aos="fade-down" data-aos-duration="1000">Layanan Kami</h1>
-
-        @foreach($layanans as $layanan)
         <div class="row" data-aos="fade-down" data-aos-duration="1000">
+            @foreach ($layanans as $layanan)
             <div class="col-md-4 mb-4">
-                <div class="card shadow-sm border-0">
-                    <img src="{{ asset('storage/'.$layanan->image) }}" class="card-img-top" alt="{{ $layanan->name }}">
+                <div class="card border-0 rounded-lg card-lamp-effect">
+                    <img src="{{ asset('storage/'.$layanan->gambar) }}" class="card-img-top" alt="{{ $layanan->nama }}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $layanan->name }}</h5>
-                        <p class="card-text">{{ $layanan->short_description }}</p>
+                        <h5 class="card-title">{{ $layanan->tipe_paket }}</h5>
+                        <p class="card-text">{!! nl2br(e($layanan->deskripsi)) !!}</p>
+                        <p class="text-primary"><strong>Harga: Rp {{ number_format($layanan->harga_paket, 0, ',', '.') }} </strong></p>
                         <a href="{{ route('layanan.detail_layanan', ['id' => $layanan->id]) }}" class="btn btn-primary">Lihat Detail</a>
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
-        @endforeach
     </div>
 </section>
 
@@ -49,7 +49,7 @@
             <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="card bg-light text-dark">
                     <div class="card-body text-center">
-                        <i class="bi bi-people-fill fs-1 mb-3"></i> <!-- Icon Orang Profesional -->
+                        <i class="bi bi-people-fill fs-1 mb-3"></i>
                         <h5 class="card-title">Pengalaman Profesional</h5>
                         <p class="card-text">Tim fotografer kami memiliki pengalaman bertahun-tahun dalam menangani berbagai jenis pemotretan, dari pernikahan hingga foto produk, dengan pendekatan yang profesional.</p>
                     </div>

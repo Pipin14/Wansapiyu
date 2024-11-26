@@ -24,7 +24,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1300" data-aos-duration="800">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="800">
                     <div class="card border-light shadow-sm">
                         <img src="{{ asset('images/portofolio/sampel2.jpg') }}" class="card-img-top" alt="Sample 2" style="transition: transform 0.3s ease;">
                         <div class="card-body text-center">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1600" data-aos-duration="800">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1400" data-aos-duration="800">
                     <div class="card border-light shadow-sm">
                         <img src="{{ asset('images/portofolio/sampel3.jpg') }}" class="card-img-top" alt="Sample 3" style="transition: transform 0.3s ease;">
                         <div class="card-body text-center">
@@ -52,13 +52,13 @@
         <div class="text-center mb-5" data-aos="zoom-in">
             <h2 class="h3 mb-4" style="font-size: 2.5rem;">Galeri Kami</h2>
             <div class="row">
-                <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="500">
+                <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="800">
                     <img src="{{ asset('images/portofolio/photo1.jpg') }}" class="img-fluid rounded shadow" alt="Wedding Photo" style="transition: transform 0.3s ease-in-out;">
                 </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1000">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="800">
                     <img src="{{ asset('images/portofolio/photo2.jpg') }}" class="img-fluid rounded shadow" alt="Corporate Event" style="transition: transform 0.3s ease-in-out;">
                 </div>
-                <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="1500">
+                <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="500">
                     <img src="{{ asset('images/portofolio/photo3.jpg') }}" class="img-fluid rounded shadow" alt="Portrait Session" style="transition: transform 0.3s ease-in-out;">
                 </div>
             </div>
@@ -71,19 +71,19 @@
     <div class="container">
         <h2 class="h3 mb-4 text-center" data-aos="fade-up" data-aos-delay="500" style="font-size: 2.5rem;">Pencapaian Kami</h2>
         <div class="row">
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1300">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
                 <div class="statistic-box shadow-lg p-4 bg-white rounded">
                     <h3 class="display-4 statistic-counter" data-count="200+" data-type="plus">0</h3>
                     <p class="lead">Proyek Selesai</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1300">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="800">
                 <div class="statistic-box shadow-lg p-4 bg-white rounded">
                     <h3 class="display-4 statistic-counter" data-count="92" data-type="percent">0</h3>
                     <p class="lead">Klien Puas</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1300">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1100">
                 <div class="statistic-box shadow-lg p-4 bg-white rounded">
                     <h3 class="display-4 statistic-counter" data-count="88" data-type="percent">0</h3>
                     <p class="lead">Klien Repeat Order</p>
