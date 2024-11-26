@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Layanan extends Model
 {
-    protected $table = 'layanans';
+    use HasFactory;
 
-    protected $fillable = ['name', 'description', 'image', 'short_description'];
+    protected $guarded = [];
 }

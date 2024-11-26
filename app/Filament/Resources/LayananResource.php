@@ -11,10 +11,13 @@ use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\MarkdownEditor;
 use App\Filament\Resources\LayananResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\LayananResource\RelationManagers;
+use Illuminate\Support\Str;
 
 class LayananResource extends Resource
 {
@@ -29,11 +32,11 @@ class LayananResource extends Resource
                 Select::make('tipe_paket')
                     ->required()
                     ->options([
-                        'paket_1' => 'Paket 1',
-                        'paket_2' => 'Paket 2',
-                        'photo_group' => 'Photo Group',
-                        'cinematic' => 'Cinematic Video Only',
-                        'ultimate' => 'Ultimate',
+                        'Paket 1' => 'Paket 1',
+                        'Paket 2' => 'Paket 2',
+                        'Photo group' => 'Photo Group',
+                        'Cinematic' => 'Cinematic Video Only',
+                        'Ultimate' => 'Ultimate',
                     ])
                     ->placeholder('Pilih tipe paket...')
                     ->native(false),
@@ -58,6 +61,12 @@ class LayananResource extends Resource
                         'undo',
                     ])
                     ->placeholder('Deskripsi berdasarkan tipe paket...'),
+                FileUpload::make('gambar')
+                    ->disk('public')
+                    ->directory('images/layanans')
+                    ->visibility('public')
+                    ->image()
+                    ->columnSpan(2),
             ]);
     }
 
@@ -70,7 +79,19 @@ class LayananResource extends Resource
                     ->searchable()
                     ->sortable(),
                 TextColumn::make('harga_paket'),
-                TextColumn::make('deskripsi'),
+                TextColumn::make('deskripsi')
+                    ->getStateUsing(fn($record) => htmlspecialchars($record->deskripsi))
+                    ->formatStateUsing(fn($state) => Str::limit($state, 20)),
+
+                ImageColumn::make('gambar')
+                    ->square()
+                    ->width(100)
+                    ->height(100)
+                    ->label('Gambar Layanan')
+                    ->default('/path/to/default-image.jpg')
+                    ->getStateUsing(function ($record) {
+                        return asset('storage/' . $record->gambar);
+                    }),
             ])
             ->filters([
                 //
