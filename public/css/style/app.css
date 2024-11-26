@@ -1,0 +1,347 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 70px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #000;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+    color: #f39c12; 
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link:focus {
+    color: #f39c12;
+    outline: none;
+    font-weight: bold;
+}
+
+.bg-light {
+    background-color: #f8f9fa; 
+}
+
+.bg-primary {
+    background: linear-gradient(135deg, #a8c0ff 0%, #3f4e7c 100%);
+    color: #fff;
+}
+
+.bg-light {
+    background-color: #f1f3f5;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+/* .btn-light {
+    background-color: #ffffff;
+    color: #495057;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: #f1f3f5;
+    color: #007bff;
+    border-color: #007bff;
+} */
+
+h1, h2 {
+    font-family: 'Lora', serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.lead {
+    font-size: 1.125rem;
+    color: #6c757d;
+}
+
+input, textarea {
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+}
+
+.hero-bg {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.hero-section .btn {
+    font-size: 1.1rem;
+    padding: 12px 40px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-section .btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.animated {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer text styling */
+footer {
+    font-family: 'Arial', sans-serif;
+    padding: 40px 0;
+    background-color: #343a40;
+    color: #fff;
+}
+footer p, footer ul li {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+footer h5 {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+footer .footer-text {
+    margin-bottom: 20px;
+}
+
+footer .col-md-3 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #f8f9fa;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #f39c12;
+}
+
+footer .d-flex a i {
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .d-flex a:hover i {
+    transform: scale(1.1);
+    color: #f39c12;
+}
+
+footer .mt-4 p {
+    font-size: 12px;
+    color: #ddd;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 0;
+    }
+}
+
+/* Gaya tombol utama */
+.btn-primary {
+    display: inline-block;
+    padding: 0.5rem 1rem;  /* Mengurangi padding agar tombol lebih kecil */
+    font-size: 0.875rem;  /* Mengurangi ukuran font agar lebih kecil */
+    font-weight: 600;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 86, 179, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Gaya tombol light */
+.btn-light {
+    display: inline-block;
+    padding: 0.5rem 1rem;  /* Mengurangi padding agar tombol lebih kecil */
+    font-size: 0.875rem;  /* Mengurangi ukuran font agar lebih kecil */
+    font-weight: 600;
+    color: #007bff;
+    background-color: #f8f9fa;
+    border: 2px solid #007bff;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-light:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 86, 179, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Animasi halus */
+.animated {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lazy-image {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.lazy-image[src] {
+    opacity: 1;
+}
+
+
+@media (max-width: 767px) {
+    .footer-text {
+        font-size: 14px;
+    }
+
+    .footer-text, .text-uppercase {
+        text-align: center; 
+    }
+
+    .list-unstyled {
+        padding-left: 0;
+    }
+
+    .list-unstyled li {
+        margin-bottom: 10px; 
+    }
+
+    .col-md-3 {
+        text-align: center; 
+    }
+
+    .d-flex {
+        justify-content: center;
+    }
+
+    .me-3 {
+        margin-right: 10px;
+    }
+
+    .bi {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,119 @@
+@extends('frontend.app')
+
+@section('title', 'Layanan Kami')
+
+@section('content')
+
+<section class="bg-light py-5">
+    <div class="container">
+        <h1 class="display-4 text-center mb-5" data-aos="fade-down" data-aos-duration="1000">Layanan Kami</h1>
+
+        @foreach($layanans as $layanan)
+        <div class="row" data-aos="fade-down" data-aos-duration="1000">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm border-0">
+                    <img src="{{ asset('storage/'.$layanan->image) }}" class="card-img-top" alt="{{ $layanan->name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $layanan->name }}</h5>
+                        <p class="card-text">{{ $layanan->short_description }}</p>
+                        <a href="{{ route('layanan.detail_layanan', ['id' => $layanan->id]) }}" class="btn btn-primary">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+</section>
+
+<section class="bg-light py-5" data-aos="zoom-in" data-aos-duration="1200">
+    <div class="container text-center">
+        <h2 class="mb-4">Tertarik dengan Layanan Kami?</h2>
+        <p class="lead mb-4">Kami siap membantu Anda mengabadikan momen terbaik dalam hidup Anda. Jelajahi layanan kami yang beragam atau langsung hubungi kami untuk mendapatkan informasi lebih lanjut!</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="{{ route('contact.us') }}" class="btn btn-primary btn-lg d-flex align-items-center">
+                <i class="bi bi-chat-dots me-2"></i> Hubungi Kami
+            </a>
+            <a href="{{ route('layanan') }}" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
+                <i class="bi bi-search me-2"></i> Jelajahi Layanan
+            </a>
+        </div>
+        <img src="{{ asset('images/services.png') }}" class="img-fluid rounded mt-4" alt="Layanan Kami" style="max-width: 40%;">
+    </div>
+</section>
+
+<section class="bg-primary text-white py-5">
+    <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-down" data-aos-duration="1200">Mengapa Memilih Kami?</h2>
+        <div class="row">
+            <!-- Pengalaman Profesional -->
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="card bg-light text-dark">
+                    <div class="card-body text-center">
+                        <i class="bi bi-people-fill fs-1 mb-3"></i> <!-- Icon Orang Profesional -->
+                        <h5 class="card-title">Pengalaman Profesional</h5>
+                        <p class="card-text">Tim fotografer kami memiliki pengalaman bertahun-tahun dalam menangani berbagai jenis pemotretan, dari pernikahan hingga foto produk, dengan pendekatan yang profesional.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kualitas Foto Terbaik -->
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="card bg-light text-dark">
+                    <div class="card-body text-center">
+                        <i class="bi bi-camera-reels fs-1 mb-3"></i> <!-- Icon Kamera -->
+                        <h5 class="card-title">Kualitas Foto Terbaik</h5>
+                        <p class="card-text">Kami hanya menggunakan peralatan fotografi terbaik untuk memastikan setiap momen Anda terekam dengan kualitas tinggi dan tajam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layanan Pelanggan Terbaik -->
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="card bg-light text-dark">
+                    <div class="card-body text-center">
+                        <i class="bi bi-chat-dots-fill fs-1 mb-3"></i> <!-- Icon Percakapan -->
+                        <h5 class="card-title">Layanan Pelanggan Terbaik</h5>
+                        <p class="card-text">Kami percaya bahwa komunikasi adalah kunci. Tim kami selalu siap membantu Anda dengan respons cepat dan solusi yang tepat untuk kebutuhan fotografi Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-5 bg-light text-black">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                <img src="{{ asset('images/get-in-touch.jpg') }}" alt="Get in Touch" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
+                <h2 class="h2 font-weight-bold text-black mb-4">Hubungi Kami</h2>
+                <p class="lead mb-4">Kami ingin mendengar dari Anda! Baik Anda membutuhkan informasi lebih lanjut atau ingin memesan sesi, jangan ragu untuk menghubungi kami.</p>
+
+                <form action="{{ route('contact.us') }}" method="POST">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nama Anda</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Anda</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email Anda" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Pesan Anda</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Masukkan pesan Anda" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-light btn-lg">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@endsection
