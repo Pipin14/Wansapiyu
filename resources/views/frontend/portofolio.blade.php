@@ -25,26 +25,88 @@
                     @endforeach
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Galeri Kami Section -->
-            <div class="text-center mb-5" data-aos="zoom-in">
-                <h2 class="h3 mb-4" style="font-size: 2.5rem;">Galeri Kami</h2>
-                <div class="row">
-                    <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="800">
-                        <img src="{{ asset('images/portofolio/photo1.jpg') }}" class="img-fluid rounded shadow" alt="Wedding Photo" style="transition: transform 0.3s ease-in-out;">
+    <section class="py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="h3 mb-4 text-center" style="font-size: 2.5rem;" data-aos="fade-up" data-aos-delay="500">Sertifikasi dan Penghargaan Kami</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="award-box shadow-lg p-4 bg-white rounded">
+                        <img src="{{ asset('images/awards/award1.jpg') }}" alt="Award 1" class="img-fluid mb-3">
+                        <h5 class="h4">Penghargaan Inovasi 2023</h5>
+                        <p class="lead">Diberikan untuk inovasi terbaik dalam desain produk.</p>
                     </div>
-                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="800">
-                        <img src="{{ asset('images/portofolio/photo2.jpg') }}" class="img-fluid rounded shadow" alt="Corporate Event" style="transition: transform 0.3s ease-in-out;">
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="800">
+                    <div class="award-box shadow-lg p-4 bg-white rounded">
+                        <img src="{{ asset('images/awards/award2.jpg') }}" alt="Award 2" class="img-fluid mb-3">
+                        <h5 class="h4">Sertifikat ISO 9001</h5>
+                        <p class="lead">Sertifikasi untuk standar kualitas manajemen terbaik.</p>
                     </div>
-                    <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="500">
-                        <img src="{{ asset('images/portofolio/photo3.jpg') }}" class="img-fluid rounded shadow" alt="Portrait Session" style="transition: transform 0.3s ease-in-out;">
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1100">
+                    <div class="award-box shadow-lg p-4 bg-white rounded">
+                        <img src="{{ asset('images/awards/award3.jpg') }}" alt="Award 3" class="img-fluid mb-3">
+                        <h5 class="h4">Top Business Award 2023</h5>
+                        <p class="lead">Penghargaan untuk pertumbuhan bisnis yang luar biasa.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pencapaian Kami Section -->
+    <section class="py-5" style="background-color: #f8f9fa; background: transparent;">
+        <div class="container">
+            <h2 class="h3 mb-4 text-center" style="font-size: 2.5rem;" data-aos="fade-in" data-aos-delay="500">Klien Kami</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="marquee-container">
+                        <div class="marquee">
+                            <div class="marquee-item">
+                                <img src="{{ asset('images/clients/BINUS.png') }}" alt="Client 1" class="img-fluid">
+                            </div>
+                            <div class="marquee-item">
+                                <img src="{{ asset('images/clients/UNJ.png') }}" alt="Client 2" class="img-fluid">
+                            </div>
+                            <div class="marquee-item">
+                                <img src="{{ asset('images/clients/UINSYAHID.png') }}" alt="Client 3" class="img-fluid">
+                            </div>
+                            <div class="marquee-item">
+                                <img src="{{ asset('images/clients/IPB.png') }}" alt="Client 4" class="img-fluid">
+                            </div>
+                            <div class="marquee-item">
+                                <img src="{{ asset('images/clients/UNPAM.png') }}" alt="Client 5" class="img-fluid">
+                            </div>
+                            <div class="marquee-item">
+                                <img src="{{ asset('images/clients/BAKRIE.png') }}" alt="Client 6" class="img-fluid">
+                            </div>
+
+                            <div class="marquee-item">
+                                <img src="{{ asset('images/clients/BINUS.png') }}" alt="Client 1" class="img-fluid">
+                            </div>
+                            <div class="marquee-item">
+                                <img src="{{ asset('images/clients/UNJ.png') }}" alt="Client 2" class="img-fluid">
+                            </div>
+                            <div class="marquee-item">
+                                <img src="{{ asset('images/clients/UINSYAHID.png') }}" alt="Client 3" class="img-fluid">
+                            </div>
+                            <div class="marquee-item">
+                                <img src="{{ asset('images/clients/IPB.png') }}" alt="Client 4" class="img-fluid">
+                            </div>
+                            <div class="marquee-item">
+                                <img src="{{ asset('images/clients/UNPAM.png') }}" alt="Client 5" class="img-fluid">
+                            </div>
+                            <div class="marquee-item">
+                                <img src="{{ asset('images/clients/BAKRIE.png') }}" alt="Client 6" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
     <section class="py-5" style="background-color: #f8f9fa;">
         <div class="container">
             <h2 class="h3 mb-4 text-center" data-aos="fade-up" data-aos-delay="500" style="font-size: 2.5rem;">Pencapaian Kami</h2>

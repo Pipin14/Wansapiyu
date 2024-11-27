@@ -119,31 +119,25 @@
 </section>
 
 <section class="py-5">
-    <div class="container text-center">
-        <h2 class="h2 font-weight-bold text-dark mb-4" data-aos="fade-up">Apa Kata Klien Kami</h2>
+    <div class="container">
+        <h2 class="h3 mb-4 text-center" style="font-size: 2.5rem;" data-aos="fade-up" data-aos-delay="500">Testimoni Klien</h2>
         <div class="row">
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1000">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <p class="card-text">"Foto-fotonya luar biasa! Fotografernya sangat profesional dan benar-benar menangkap esensi acara!"</p>
-                        <footer class="blockquote-footer">John Doe, <cite title="Source Title">Klien yang Puas</cite></footer>
-                    </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="testimonial-box shadow-lg p-4 bg-white rounded">
+                    <p class="lead">"Portofolio yang luar biasa! Kami sangat puas dengan hasil kerjanya dan pengiriman tepat waktu."</p>
+                    <p><strong>- Klien A</strong></p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1500">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <p class="card-text">"Foto pernikahan kami sempurna! Kami sangat senang dengan hasilnya. Seluruh pengalaman sangat lancar dan menyenangkan!"</p>
-                        <footer class="blockquote-footer">Jane Smith, <cite title="Source Title">Pengantin Wanita</cite></footer>
-                    </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="800">
+                <div class="testimonial-box shadow-lg p-4 bg-white rounded">
+                    <p class="lead">"Hasil kerja yang kreatif dan sangat profesional, kami pasti akan bekerja sama lagi."</p>
+                    <p><strong>- Klien B</strong></p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="2000">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <p class="card-text">"Layanan yang profesional dan tepat waktu. Kualitas gambar melebihi harapan kami. Sangat merekomendasikan!"</p>
-                        <footer class="blockquote-footer">Michael Johnson, <cite title="Source Title">Perencana Acara</cite></footer>
-                    </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1100">
+                <div class="testimonial-box shadow-lg p-4 bg-white rounded">
+                    <p class="lead">"Mereka selalu memberikan solusi terbaik untuk setiap proyek yang kami kerjakan bersama."</p>
+                    <p><strong>- Klien C</strong></p>
                 </div>
             </div>
         </div>
