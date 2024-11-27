@@ -21,13 +21,16 @@ class GaleriResource extends Resource
 {
     protected static ?string $model = Galeri::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-photo';
+
+    protected static ?string $navigationGroup = 'Content';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Select::make('portofolio_id')
+                    ->required()
                     ->label('Portofolio')
                     ->options(Portofolio::all()->pluck('judul', 'id'))
                     ->rules('required')
@@ -46,7 +49,8 @@ class GaleriResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('portofolio_id'),
+                TextColumn::make('portofolio_id')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('portofolio.judul')
                     ->label('Judul Portofolio')
                     ->sortable()

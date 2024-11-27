@@ -18,7 +18,7 @@ class PortofolioResource extends Resource
 {
     protected static ?string $model = Portofolio::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-photo';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-list';
     protected static ?string $navigationLabel = 'Portofolio';
     protected static ?string $navigationGroup = 'Content';
 
