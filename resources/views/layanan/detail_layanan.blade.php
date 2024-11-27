@@ -13,12 +13,11 @@
                 <h2 class="display-4 mb-4 text-dark">{{ $layanan->nama }}</h2>
                 <p class="card-text mb-4">{!! nl2br(e($layanan->deskripsi)) !!}</p>
                 <p class="mb-4"><strong>Harga: <span class="text-primary">Rp {{ number_format($layanan->harga_paket, 0, ',', '.') }} </strong></span></p>
-
-                <div class="d-flex justify-content-start align-items-center gap-3 mt-4">
-                    <a href="{{ route('layanan') }}" class="btn btn-outline-secondary btn-sm">
+                <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
+                    <a href="{{ route('layanan') }}" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
                         <i class="bi bi-arrow-left-circle me-2"></i> Kembali ke Layanan
                     </a>
-                    <a href="{{ route('contact.us') }}" class="btn btn-primary btn-lg">
+                    <a href="{{ route('contact.us') }}" class="btn btn-primary btn-lg d-flex align-items-center">
                         <i class="bi bi-chat-dots me-2"></i> Hubungi Kami
                     </a>
                 </div>

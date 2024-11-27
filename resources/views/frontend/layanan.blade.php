@@ -6,8 +6,8 @@
 
 <section class="bg-light py-5">
     <div class="container">
-        <h1 class="display-4 text-center" data-aos="fade-down" data-aos-duration="1000">Layanan Kami</h1>
-        <p class="text-center mt-2 mb-5">Temukan layanan fotografi yang sesuai dengan kebutuhan Anda. Jadikan momen spesial Anda terekam dengan profesionalisme dan kreativitas kami. Temukan penawaran terbaik untuk kebutuhan fotografi Anda.</p>
+        <h1 class="display-4 text-center" data-aos="fade-up" data-aos-duration="1000">Layanan Kami</h1>
+        <p class="text-center mt-2 mb-5" data-aos="fade-up" data-aos-duration="1000">Temukan layanan fotografi yang sesuai dengan kebutuhan Anda. Jadikan momen spesial Anda terekam dengan profesionalisme dan kreativitas kami. Temukan penawaran terbaik untuk kebutuhan fotografi Anda.</p>
         <div class="row" data-aos="fade-down" data-aos-duration="1000">
             @foreach ($layanans as $layanan)
             <div class="col-md-4 mb-4">

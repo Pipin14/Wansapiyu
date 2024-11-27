@@ -93,10 +93,6 @@ a {
 .card-img-top {
     transition: transform 0.3s ease;
 }
-/* 
-.card-img-top:hover {
-    transform: scale(1.05);
-} */
 
 h1, h2 {
     font-family: 'Lora', serif;

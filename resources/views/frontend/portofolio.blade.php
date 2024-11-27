@@ -18,7 +18,7 @@
                             <div class="card-body text-start">
                                 <h5 class="card-title">{{ $portofolio->judul }}</h5>
                                 <p class="card-text">{{nl2br($portofolio->deskripsi)}}</p>
-                                <a href="#" class="btn btn-primary">Lihat Detail</a>
+                                <a href="{{ route('portofolio.kategori', $portofolio->judul) }}" class="btn btn-primary">Lihat Selengkapnya</a>
                             </div>
                         </div>
                     </div>
