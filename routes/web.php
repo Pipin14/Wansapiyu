@@ -11,7 +11,11 @@ Route::get('/layanan', [FrontendController::class, 'layanan'])->name('layanan');
 Route::get('/layanan/{id}', [LayananController::class, 'show'])->name('layanan.detail_layanan');
 
 Route::get('/portofolio', [FrontendController::class, 'portofolio'])->name('portofolio');
-Route::get('/portofolio/{kategori}', [PortofolioController::class,'showByKategori'])->name('portofolio.kategori');
+Route::get('/portofolio/{kategori}', [PortofolioController::class, 'showByKategori'])->name('portofolio.kategori');
 
 Route::get('/about-us', [FrontendController::class, 'aboutUs'])->name('about.us');
+Route::get('/about-us', function () {
+    $aboutUsSections = \App\Models\AboutUs::all();
+    return view('frontend.about-us', compact('aboutUsSections'));
+})->name('about.us');
 Route::get('/contact-us', [FrontendController::class, 'contactUs'])->name('contact.us');
