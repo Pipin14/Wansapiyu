@@ -12,9 +12,9 @@ class PortofolioController extends Controller
     public function index()
     {
         $portofolios = Portofolio::all();
-        Log::info($portofolios);
+        $Galeri = Galeri::inRandomOrder()->limit(3)->get();
 
-        return view('portofolio.index', compact('portofolios'));
+        return view('portofolio.index', compact('portofolios', 'Galeri'));
     }
 
     public function showByKategori($kategori)
@@ -25,7 +25,7 @@ class PortofolioController extends Controller
             abort(404, 'Portofolio not found');
         }
 
-        $galeris = $portofolio->galeris;
+        $galeris = $portofolio->galeris->random(3);
 
         return view('portofolio.galeri_portofolio', compact('portofolio', 'galeris'));
     }
