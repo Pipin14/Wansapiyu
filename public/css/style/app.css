@@ -367,3 +367,55 @@ footer .mt-4 p {
         font-size: 24px;
     }
 }
+
+.marquee-container {
+    overflow: hidden;
+    position: relative;
+    padding: 60px 0;
+    white-space: nowrap;
+}
+
+.marquee {
+    display: flex;
+    animation: marqueeAnimation 15s linear infinite;
+}
+
+.marquee-item {
+    flex-shrink: 0;
+    margin-right: 30px;
+}
+
+.marquee img {
+    max-height: 150px;
+    object-fit: contain;
+}
+
+@keyframes marqueeAnimation {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .marquee img {
+        max-height: 100px;
+    }
+
+    .marquee-item {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .marquee img {
+        max-height: 70px;
+    }
+
+    .marquee-item {
+        margin-right: 15px;
+    }
+}
