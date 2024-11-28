@@ -23,7 +23,7 @@ class LayananResource extends Resource
 {
     protected static ?string $model = Layanan::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-cog-8-tooth';
+    protected static ?string $navigationIcon = 'heroicon-o-wrench-screwdriver';
     protected static ?string $navigationGroup = 'Content';
 
     public static function form(Form $form): Form
@@ -83,13 +83,11 @@ class LayananResource extends Resource
                 TextColumn::make('deskripsi')
                     ->getStateUsing(fn($record) => htmlspecialchars($record->deskripsi))
                     ->formatStateUsing(fn($state) => Str::limit($state, 20)),
-
                 ImageColumn::make('gambar')
                     ->square()
                     ->width(100)
                     ->height(100)
                     ->label('Gambar Layanan')
-                    ->default('/path/to/default-image.jpg')
                     ->getStateUsing(function ($record) {
                         return asset('storage/' . $record->gambar);
                     }),

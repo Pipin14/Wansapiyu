@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AboutUs;
+use App\Models\Anggota;
 use App\Models\Layanan;
 use App\Models\Portofolio;
 use Illuminate\Http\Request;
@@ -29,7 +31,10 @@ class FrontendController extends Controller
 
     public function aboutUs()
     {
-        return view('frontend.about-us');
+        $aboutUsSections = AboutUs::all();
+        $anggotas = Anggota::all();
+
+        return view('frontend.about-us', compact('aboutUsSections', 'anggotas'));
     }
 
     public function contactUs()

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Anggota;
 use App\Models\Portofolio;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LayananController;
@@ -16,6 +17,7 @@ Route::get('/portofolio/{kategori}', [PortofolioController::class, 'showByKatego
 Route::get('/about-us', [FrontendController::class, 'aboutUs'])->name('about.us');
 Route::get('/about-us', function () {
     $aboutUsSections = \App\Models\AboutUs::all();
-    return view('frontend.about-us', compact('aboutUsSections'));
+    $anggotas = Anggota::all();
+    return view('frontend.about-us', compact('aboutUsSections', 'anggotas'));
 })->name('about.us');
 Route::get('/contact-us', [FrontendController::class, 'contactUs'])->name('contact.us');
