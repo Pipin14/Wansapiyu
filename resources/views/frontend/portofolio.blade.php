@@ -17,7 +17,7 @@
                             <img src="{{ asset('storage/' . $portofolio->gambar_portofolio) }}" class="card-img-top" alt="Gambar Portofolio">
                             <div class="card-body text-start">
                                 <h5 class="card-title">{{ $portofolio->judul }}</h5>
-                                <p class="card-text">{{nl2br($portofolio->deskripsi)}}</p>
+                                <p class="card-text">{!! nl2br(e($portofolio->deskripsi)) !!}</p>
                                 <a href="{{ route('portofolio.kategori', $portofolio->judul) }}" class="btn btn-primary">Lihat Selengkapnya</a>
                             </div>
                         </div>
@@ -112,26 +112,42 @@
             <h2 class="h3 mb-4 text-center" data-aos="fade-up" data-aos-delay="500" style="font-size: 2.5rem;">Pencapaian Kami</h2>
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
-                    <div class="statistic-box shadow-lg p-4 bg-white rounded">
-                        <h3 class="display-4 statistic-counter" data-count="200+" data-type="plus">0</h3>
-                        <p class="lead">Proyek Selesai</p>
+                    <div class="d-flex align-items-center statistic-box shadow-lg p-4 bg-white rounded">
+                        <div class="flex-grow-1">
+                            <h3 class="display-4 statistic-counter" style="color: #007bff;" data-count="200+" data-type="plus">0</h3>
+                            <p class="lead mb-0">Proyek Selesai</p>
+                        </div>
+                        <div class="ms-3">
+                            <i class="fas fa-tasks fa-4x text-primary"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="800">
-                    <div class="statistic-box shadow-lg p-4 bg-white rounded">
-                        <h3 class="display-4 statistic-counter" data-count="92" data-type="percent">0</h3>
-                        <p class="lead">Klien Puas</p>
+                    <div class="d-flex align-items-center statistic-box shadow-lg p-4 bg-white rounded">
+                        <div class="flex-grow-1">
+                            <h3 class="display-4 statistic-counter" style="color: #5D752AFF;" data-count="92" data-type="percent">0</h3>
+                            <p class="lead mb-0">Klien Puas</p>
+                        </div>
+                        <div class="ms-3">
+                            <i class="fas fa-smile fa-4x text-success"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1100">
-                    <div class="statistic-box shadow-lg p-4 bg-white rounded">
-                        <h3 class="display-4 statistic-counter" data-count="88" data-type="percent">0</h3>
-                        <p class="lead">Klien Repeat Order</p>
+                    <div class="d-flex align-items-center statistic-box shadow-lg p-4 bg-white rounded">
+                        <div class="flex-grow-1">
+                            <h3 class="display-4 statistic-counter" style="color: #CDB716FF;" data-count="100+" data-type="plus">0</h3>
+                            <p class="lead mb-0">Klien Baru tiap Bulan</p>
+                        </div>
+                        <div class="ms-3">
+                            <i class="fas fa-user fa-4x text-warning"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     @push('scripts')
     @endpush

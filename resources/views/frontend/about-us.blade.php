@@ -43,12 +43,14 @@
         <div class="row justify-content-center">
             @foreach ($anggotas as $anggota)
             <div class="col-md-4 mb-4" data-aos="fade-left">
-                <div class="card shadow-sm border-light rounded">
-                    <img src="{{ $anggota->photo ? asset('storage/' . $anggota->photo) : asset('images/default-user.png') }}"
-                        class="card-img-top rounded-circle mx-auto mt-4"
-                        alt="{{ $anggota->nama_anggota }}"
-                        width="150">
-                    <div class="card-body text-center">
+                <div class="card shadow-sm border-outline shadow-lg rounded-lg">
+                    <div class="card-img-top rounded-circle mx-auto">
+                        <img src="{{ $anggota->photo ? asset('storage/' . $anggota->photo) : asset('images/default-user.png') }}"
+                            class="card-img-top mx-auto"
+                            alt="{{ $anggota->nama_anggota }}"
+                            width="150">
+                    </div>
+                    <div class="card-body text-center mt-4">
                         <h5 class="card-title mb-1">{{ $anggota->nama_anggota }}</h5>
                         <p class="text-muted mb-3">{{ $anggota->role }}</p>
                         <div class="social-icons mt-3">

@@ -31,12 +31,10 @@
         <h2 class="mb-4">Tertarik dengan Layanan Kami?</h2>
         <p class="lead mb-4">Kami siap membantu Anda mengabadikan momen terbaik dalam hidup Anda. Jelajahi layanan kami yang beragam atau langsung hubungi kami untuk mendapatkan informasi lebih lanjut!</p>
         <div class="d-flex justify-content-center gap-3">
-            <a href="{{ route('contact.us') }}" class="btn btn-primary btn-lg d-flex align-items-center">
-                <i class="bi bi-chat-dots me-2"></i> Hubungi Kami
+            <a href="https://wa.me/6281386040075?text=Halo,%20saya%20ingin%20bertanya%20tentang%20layanan%20fotografi?"
+                class="btn btn-success btn-lg d-flex align-items-center" target="_blank">
+                <i class="bi bi-whatsapp me-2"></i> Hubungi Kami
             </a>
-            <!-- <a href="{{ route('layanan') }}" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
-                <i class="bi bi-search me-2"></i> Jelajahi Layanan
-            </a> -->
         </div>
         <img src="{{ asset('images/services.png') }}" class="img-fluid rounded mt-4" alt="Layanan Kami" style="max-width: 40%;">
     </div>

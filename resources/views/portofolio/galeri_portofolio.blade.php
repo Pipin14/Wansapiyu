@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1 class="d-flex justify-content-center text-center mt-4 mb-4"> Galeri - {{ $portofolio->judul }}</h1>
+    <h2 class="d-flex justify-content-center text-center mt-4 mb-4"> Galeri - {{ $portofolio->judul }}</h2>
     <div class="row">
         @foreach($galeris as $galeri)
         <div class="col-md-4 mb-4">
