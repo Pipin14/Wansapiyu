@@ -60,6 +60,7 @@ class GaleriResource extends Resource
                     ->width(100)
                     ->height(100)
                     ->label('Galeri Portofolio')
+                    ->columnSpan(2)
                     // ->default('/path/to/default-image.jpg')
                     ->getStateUsing(function ($record) {
                         return asset('storage/' . $record->galeri_portofolio);

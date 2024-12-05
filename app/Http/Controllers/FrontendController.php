@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
+use App\Models\FAQ;
+use App\Models\Ulasan;
 use App\Models\AboutUs;
 use App\Models\Anggota;
 use App\Models\Layanan;
+use App\Models\Customer;
 use App\Models\Portofolio;
 use Illuminate\Http\Request;
-use App\Models\Customer;
-use App\Models\Ulasan;
-use Carbon\Carbon;
 
 class FrontendController extends Controller
 {
@@ -53,7 +54,9 @@ class FrontendController extends Controller
 
     public function contactUs()
     {
-        return view('frontend.contact-us');
+        $faqs = FAQ::all();
+
+        return view('frontend.contact-us', compact('faqs'));
     }
 
 
