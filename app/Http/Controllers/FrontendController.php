@@ -7,12 +7,26 @@ use App\Models\Anggota;
 use App\Models\Layanan;
 use App\Models\Portofolio;
 use Illuminate\Http\Request;
+use App\Models\Customer;
+use App\Models\Ulasan;
+use Carbon\Carbon;
 
 class FrontendController extends Controller
 {
     public function index()
     {
-        return view('frontend.home');
+        $portofolios = Portofolio::all();
+        // if (!$portofolios) {
+        //     return redirect()->back()->with('error', 'Data tidak ditemukan.');
+        // }
+
+        // if ($portofolios->isEmpty()) {
+        //     return view('portofolios.index', ['portofolios' => []])
+        //         ->with('error', 'Tidak ada data portofolio.');
+        // }
+
+
+        return view('frontend.home', compact('portofolios'));
     }
 
     public function layanan()
@@ -41,4 +55,16 @@ class FrontendController extends Controller
     {
         return view('frontend.contact-us');
     }
+
+
+    // public function showAchievements()
+    // {
+    //     $totalClients = Customer::count();
+    //     $positiveReviewsPercentage = Ulasan::where('rating', '>=', 4)->count() / Ulasan::count() * 100;
+    //     $newClientsThisMonth = Customer::whereMonth('created_at', Carbon::now()->month)
+    //         ->whereYear('created_at', Carbon::now()->year)
+    //         ->count();
+
+    //     return view('frontend.achievements', compact('totalClients', 'positiveReviewsPercentage', 'newClientsThisMonth'));
+    // }
 }

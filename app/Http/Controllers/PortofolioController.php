@@ -25,8 +25,17 @@ class PortofolioController extends Controller
             abort(404, 'Portofolio not found');
         }
 
-        $galeris = $portofolio->galeris->random(3);
+        $galeris = $portofolio->galeris;
 
+        if ($galeris->isEmpty()) {
+            return redirect()->back()->with('error', 'Galeri tidak ditemukan.');
+        }
+
+        if ($galeris->count() < 3) {
+            $galeris = $galeris;
+        } else {
+            $galeris = $galeris->random(3);
+        }
         return view('portofolio.galeri_portofolio', compact('portofolio', 'galeris'));
     }
 }
