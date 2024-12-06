@@ -28,7 +28,7 @@
         </div>
     </section>
 
-    <section class="py-5" style="background-color: #f8f9fa;">
+    <!-- <section class="py-5" style="background-color: #f8f9fa;">
         <div class="container">
             <h2 class="h3 mb-4 text-center" style="font-size: 2.5rem;" data-aos="fade-up" data-aos-delay="500">Sertifikasi dan Penghargaan Kami</h2>
             <div class="row">
@@ -55,7 +55,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="py-5" style="background-color: #f8f9fa; background: transparent;">
         <div class="container">
