@@ -11,6 +11,8 @@ Route::get('/', [FrontendController::class, 'index'])->name('home');
 Route::get('/layanan', [FrontendController::class, 'layanan'])->name('layanan');
 Route::get('/layanan/{id}', [LayananController::class, 'show'])->name('layanan.detail_layanan');
 
+Route::post('/submit-ulasan', [FrontendController::class, 'submitUlasan'])->name('submit.ulasan');
+
 Route::get('/portofolio', [FrontendController::class, 'portofolio'])->name('portofolio');
 Route::get('/portofolio/{kategori}', [PortofolioController::class, 'showByKategori'])->name('portofolio.kategori');
 
