@@ -27,45 +27,47 @@
             </div>
         </div>
 
+        <section class="py-5 bg-light text-black">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="{{ asset('images/rate.png') }}" alt="Ulasan Anda" class="img-fluid rounded ml-4" data-aos="fade-up">
+                    </div>
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <h2 class="h2 font-weight-bold text-black mb-4">Ulasan Anda</h2>
+                        <p class="lead mb-4">Kami ingin mendengar dari Anda! Seberapa puas Anda dalam menggunakan pelayanan jasa fotografi dari kami. Terima kasih</p>
+                        <div class="row">
+                            <form action="{{ route('submit.ulasan') }}" method="POST">
+                                @csrf
+                                <div class="mb-3">
+                                    <label for="nama_klien" class="form-label">Nama Klien</label>
+                                    <input type="text" class="form-control" id="nama_klien" name="nama_klien" placeholder="Masukkan nama Anda" required>
+                                </div>
 
-        <!-- <div class="row align-items-center">
-            <div class="col-md-6 mb-4" data-aos="fade-right" data-aos-delay="200">
-                <img src="{{ asset('images/contact-us.png') }}" alt="Contact Us" class="img-fluid rounded">
+                                <div class="mb-3">
+                                    <label for="ulasan" class="form-label">Ulasan Anda</label>
+                                    <textarea class="form-control" id="ulasan" name="ulasan" rows="4" maxlength="300" placeholder="Masukkan ulasan Anda di sini..." required></textarea>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="rating" class="form-label">Rating</label>
+                                    <div class="input-group">
+                                        <select class="form-select" id="rating" name="rating" required>
+                                            <option value="5">5</option>
+                                            <option value="4">4</option>
+                                            <option value="3">3</option>
+                                            <option value="2">2</option>
+                                            <option value="1">1</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Kirim Ulasan</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
-                <h1 class="display-4 mb-4 text-primary">Hubungi Kami</h1>
-                <p class="lead mb-4 text-muted">Kami siap membantu Anda. Kirimkan pertanyaan atau pesan Anda melalui formulir di bawah ini. Kami akan segera merespon Anda dengan penuh perhatian.</p>
-                <p class="text-muted mb-4">Apakah Anda membutuhkan layanan kami atau ingin bertanya lebih lanjut? Kami akan senang mendengar dari Anda.</p>
-                <form action="#" method="POST" class="needs-validation" novalidate>
-                    @csrf
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nama Lengkap</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                        <div class="invalid-feedback">Harap masukkan nama lengkap Anda.</div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                        <div class="invalid-feedback">Harap masukkan email yang valid.</div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="phone" class="form-label">Nomor Telepon</label>
-                        <input type="text" class="form-control" id="phone" name="phone" required>
-                        <div class="invalid-feedback">Harap masukkan nomor telepon yang valid.</div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Pesan Anda</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                        <div class="invalid-feedback">Harap masukkan pesan Anda.</div>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-lg w-100">Kirim Pesan</button>
-                </form>
-            </div>
-        </div> -->
+        </section>
 
         <div class="row mt-5">
             <div class="col-12">

@@ -22,7 +22,7 @@
 <section class="py-5 bg-light" data-aos="fade-up" data-aos-delay="600">
     <div class="container text-center">
         <h2 class="display-4 font-weight-bold text-dark mb-4">Siapa Kami</h2>
-        <p class="lead text-muted mb-5">Di Wansapiyu, kami bersemangat untuk menangkap esensi dari momen kehidupan yang paling berharga.</p>
+        <p class="lead text-muted mb-5">Di [Nama Perusahaan], kami bersemangat untuk menangkap esensi dari momen kehidupan yang paling berharga.</p>
         <div class="row">
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
                 <h3 class="h5 text-primary mb-3">Visi Kami</h3>
@@ -37,7 +37,7 @@
                 <p class="text-muted">Kami berjanji untuk memberikan layanan yang luar biasa, gambar berkualitas tinggi, dan pengalaman yang tak terlupakan, menjadikan kenangan Anda abadi.</p>
             </div>
         </div>
-        <a href="{{ route('about.us') }}" class="btn btn-primary btn-lg mt-4" data-aos="fade-up" data-aos-delay="600">Selengkapnya Tentang Kami</a>
+        <a href="{{ route('about.us') }}" class="btn btn-primary btn-lg mt-4" data-aos="fade-up" data-aos-delay="600">z Tentang Kami</a>
     </div>
 </section>
 
@@ -118,29 +118,45 @@
     </div>
 </section>
 
-<section class="py-5">
+<section class="py-5" style="background-color: #91AC8F;">
     <div class="container">
-
-        <h2 class="h3 mb-4 text-center" style="font-size: 2.5rem;" data-aos="fade-up" data-aos-delay="500">Testimoni Klien</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
-                <div class="testimonial-box shadow-lg p-4 bg-white rounded">
-                    <p class="lead">"Portofolio yang luar biasa! Kami sangat puas dengan hasil kerjanya dan pengiriman tepat waktu."</p>
-                    <p><strong>- Klien A</strong></p>
+        <h2 class="h3 mb-4 text-center text-white" style="font-size: 2.5rem;" data-aos="fade-up" data-aos-delay="500">Testimoni Klien</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                @foreach($testimonials->chunk(3) as $testimonialChunk)
+                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                    <div class="row">
+                        @foreach($testimonialChunk as $testimonial)
+                        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="{{ $loop->index * 300 }}">
+                            <div class="testimonial-box shadow-sm p-4 bg-white rounded text-center">
+                                <p class="lead" style="font-size: 1rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-height: 100px;">
+                                    "{{ $testimonial->ulasan }}"
+                                </p>
+                                <p><strong style="font-size: 1.1rem;">- {{ $testimonial->nama_klien }}</strong></p>
+                                <p class="text-muted" style="font-size: 0.9rem;">
+                                    Rating:
+                                    @for ($i = 0; $i < $testimonial->rating; $i++)
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        @endfor
+                                        @for ($i = $testimonial->rating; $i < 5; $i++)
+                                            <i class="bi bi-star text-muted"></i>
+                                            @endfor
+                                </p>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
                 </div>
+                @endforeach
             </div>
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="800">
-                <div class="testimonial-box shadow-lg p-4 bg-white rounded">
-                    <p class="lead">"Hasil kerja yang kreatif dan sangat profesional, kami pasti akan bekerja sama lagi."</p>
-                    <p><strong>- Klien B</strong></p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="800">
-                <div class="testimonial-box shadow-lg p-4 bg-white rounded">
-                    <p class="lead">"Mereka selalu memberikan solusi terbaik untuk setiap proyek yang kami kerjakan bersama."</p>
-                    <p><strong>- Klien C</strong></p>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 </section>
@@ -149,35 +165,43 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <img src="{{ asset('images/get-in-touch.jpg') }}" alt="Hubungi Kami" class="img-fluid rounded" data-aos="fade-up">
+                <img src="{{ asset('images/rate.png') }}" alt="Ulasan Anda" class="img-fluid rounded ml-4" data-aos="fade-up">
             </div>
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <h2 class="h2 font-weight-bold text-black mb-4">Hubungi Kami</h2>
-                <p class="lead mb-4">Kami ingin mendengar dari Anda! Apakah Anda membutuhkan informasi lebih lanjut atau ingin memesan sesi, jangan ragu untuk menghubungi kami.</p>
+                <h2 class="h2 font-weight-bold text-black mb-4">Ulasan Anda</h2>
+                <p class="lead mb-4">Kami ingin mendengar dari Anda! Seberapa puas Anda dalam menggunakan pelayanan jasa fotografi dari kami. Terima kasih</p>
+                <div class="row">
+                    <form action="{{ route('submit.ulasan') }}" method="POST">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="nama_klien" class="form-label">Nama Klien</label>
+                            <input type="text" class="form-control" id="nama_klien" name="nama_klien" placeholder="Masukkan nama Anda" required>
+                        </div>
 
-                <!-- Formulir Kontak -->
-                <form action="{{ route('contact.us') }}" method="POST">
-                    @csrf
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nama Anda</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama Anda" required>
-                    </div>
+                        <div class="mb-3">
+                            <label for="ulasan" class="form-label">Ulasan Anda</label>
+                            <textarea class="form-control" id="ulasan" name="ulasan" rows="4" maxlength="300" placeholder="Masukkan ulasan Anda di sini..." required></textarea>
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email Anda</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email Anda" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Pesan Anda</label>
-                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Masukkan pesan Anda" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-light btn-lg">Kirim Pesan</button>
-                </form>
+                        <div class="mb-3">
+                            <label for="rating" class="form-label">Rating</label>
+                            <div class="input-group">
+                                <select class="form-select" id="rating" name="rating" required>
+                                    <option value="5">5</option>
+                                    <option value="4">4</option>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Ulasan</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
 
 @endsection

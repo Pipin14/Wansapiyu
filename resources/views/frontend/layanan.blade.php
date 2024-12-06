@@ -26,19 +26,7 @@
     </div>
 </section>
 
-<section class="bg-light py-5" data-aos="zoom-in" data-aos-duration="1200">
-    <div class="container text-center">
-        <h2 class="mb-4">Tertarik dengan Layanan Kami?</h2>
-        <p class="lead mb-4">Kami siap membantu Anda mengabadikan momen terbaik dalam hidup Anda. Jelajahi layanan kami yang beragam atau langsung hubungi kami untuk mendapatkan informasi lebih lanjut!</p>
-        <div class="d-flex justify-content-center gap-3">
-            <a href="https://wa.me/6281386040075?text=Halo,%20saya%20ingin%20bertanya%20tentang%20layanan%20fotografi?"
-                class="btn btn-success btn-lg d-flex align-items-center" target="_blank">
-                <i class="bi bi-whatsapp me-2"></i> Hubungi Kami
-            </a>
-        </div>
-        <img src="{{ asset('images/services.png') }}" class="img-fluid rounded mt-4" alt="Layanan Kami" style="max-width: 40%;">
-    </div>
-</section>
+
 
 <section class="bg-primary text-white py-5">
     <div class="container">
@@ -80,38 +68,17 @@
     </div>
 </section>
 
-
-<section class="py-5 bg-light text-black">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
-                <img src="{{ asset('images/get-in-touch.jpg') }}" alt="Get in Touch" class="img-fluid rounded">
-            </div>
-            <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
-                <h2 class="h2 font-weight-bold text-black mb-4">Hubungi Kami</h2>
-                <p class="lead mb-4">Kami ingin mendengar dari Anda! Baik Anda membutuhkan informasi lebih lanjut atau ingin memesan sesi, jangan ragu untuk menghubungi kami.</p>
-
-                <form action="{{ route('contact.us') }}" method="POST">
-                    @csrf
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nama Anda</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama Anda" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email Anda</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email Anda" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Pesan Anda</label>
-                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Masukkan pesan Anda" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-light btn-lg">Kirim Pesan</button>
-                </form>
-            </div>
+<section class="bg-light py-5" data-aos="zoom-in" data-aos-duration="1200">
+    <div class="container text-center">
+        <h2 class="mb-4">Tertarik dengan Layanan Kami?</h2>
+        <p class="lead mb-4">Kami siap membantu Anda mengabadikan momen terbaik dalam hidup Anda. Jelajahi layanan kami yang beragam atau langsung hubungi kami untuk mendapatkan informasi lebih lanjut!</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="https://wa.me/6281386040075?text=Halo,%20saya%20ingin%20bertanya%20tentang%20layanan%20fotografi?"
+                class="btn btn-success btn-lg d-flex align-items-center" target="_blank">
+                <i class="bi bi-whatsapp me-2"></i> Hubungi Kami
+            </a>
         </div>
+        <img src="{{ asset('images/services.png') }}" class="img-fluid rounded mt-4" alt="Layanan Kami" style="max-width: 40%;">
     </div>
 </section>
 

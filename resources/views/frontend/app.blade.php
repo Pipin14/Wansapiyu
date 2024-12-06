@@ -123,29 +123,33 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            const counters = document.querySelectorAll('.statistic-counter'); // Selektor spesifik
+            const counters = document.querySelectorAll('.statistic-counter');
 
             counters.forEach(counter => {
                 let count = 0;
                 const targetValue = counter.getAttribute('data-count');
-                const target = parseInt(targetValue.replace(/\D/g, ''));
+                const target = parseFloat(targetValue);
                 const speed = 500;
                 const type = counter.getAttribute('data-type');
-
+                const isRating = counter.classList.contains('rating');
                 const formatValue = (value) => {
-                    if (type === 'percent') {
-                        return `${value}%`;
-                    } else if (targetValue.includes('+')) {
-                        return `${value}+`;
+                    if (isRating) {
+                        return value.toFixed(1);
                     }
-                    return value;
+
+                    if (type === 'percent') {
+                        return `${Math.floor(value)}%`;
+                    } else if (targetValue.includes('+')) {
+                        return `${Math.floor(value)}+`;
+                    }
+                    return Math.floor(value);
                 };
 
                 const updateCount = () => {
                     const increment = target / speed;
                     if (count < target) {
                         count += increment;
-                        counter.innerText = formatValue(Math.ceil(count));
+                        counter.innerText = formatValue(count);
                         setTimeout(updateCount, 1);
                     } else {
                         counter.innerText = formatValue(target);
