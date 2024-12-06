@@ -61,9 +61,10 @@
                 <div class="col-md-3 mb-4">
                     <h5 class="text-uppercase mb-3">Contact Us</h5>
                     <ul class="list-unstyled">
-                        <li><i class="bi bi-telephone-fill"></i> <a href="tel:+123456789" class="text-light">+1 (234) 567-89</a></li>
+                        <li><i class="bi bi-telephone-fill"></i> <a href="tel:+123456789" class="text-light">+628987654321</a></li>
+                        <li><i class="bi bi-whatsapp"></i> <a href="tel:+123456789" class="text-light">+628987654321</a></li>
                         <li><i class="bi bi-envelope-fill"></i> <a href="mailto:info@yourphotography.com" class="text-light">info@yourphotography.com</a></li>
-                        <li><i class="bi bi-geo-alt-fill"></i> 1234 Photography Street, City, Country</li>
+                        <li><i class="bi bi-geo-alt-fill"></i> 1234 Photography Street, Jakarta Pusat, Indonesia</li>
                     </ul>
                 </div>
 
@@ -83,7 +84,9 @@
                         <li><a href="#" class="text-light">Wedding Photography</a></li>
                         <li><a href="#" class="text-light">Corporate Events</a></li>
                         <li><a href="#" class="text-light">Portrait Sessions</a></li>
-                        <li><a href="#" class="text-light">Event Planning</a></li>
+                        <li><a href="#" class="text-light">Gradutation Photography</a></li>
+                        <li><a href="#" class="text-light">Product Brand</a></li>
+                        <li><a href="#" class="text-light">Building & Offices</a></li>
                     </ul>
                 </div>
             </div>
