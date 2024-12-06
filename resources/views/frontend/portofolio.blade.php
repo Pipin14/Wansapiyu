@@ -114,7 +114,7 @@
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="d-flex align-items-center statistic-box shadow-lg p-4 bg-white rounded h-100">
                         <div class="flex-grow-1">
-                            <h3 class="display-4 statistic-counter" style="color: #007bff;" data-count="200+" data-type="plus">0</h3>
+                            <h3 class="display-4 statistic-counter" style="color: #007bff;" data-count="{{ $totalCustomers }}" data-type="plus">{{ $totalCustomers > 0 ? $totalCustomers : 'N/A' }}</h3>
                             <p class="lead mb-0">Proyek Selesai</p>
                         </div>
                         <div class="ms-3">
@@ -122,11 +122,13 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="800">
                     <div class="d-flex align-items-center statistic-box shadow-lg p-4 bg-white rounded h-100">
                         <div class="flex-grow-1">
-                            <h3 class="display-4 statistic-counter rating" style="color: #5D752AFF;" data-count="{{ $averageRating }}" data-type="number">0</h3>
+                            <h3 class="display-4 d-flex align-items-baseline" style="color: #CDB716FF;">
+                                <span class="statistic-counter rating" data-count="{{ $averageRating }}" data-type="number">0</span>
+                                <span style="font-size: 1.5rem; margin-left: 0.2rem;">/5</span>
+                            </h3>
                             <p class="lead mb-0">Kepuasan Klien</p>
                         </div>
                         <div class="ms-3 d-flex justify-content-center align-items-center">
@@ -136,7 +138,7 @@
                                     @endfor
                             </div>
                             <div class="ms-3">
-                                <i class="fas fa-smile fa-4x text-success"></i>
+                                <i class="fas fa-star fa-4x text-warning"></i>
                             </div>
                         </div>
                     </div>
@@ -144,11 +146,13 @@
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1100">
                     <div class="d-flex align-items-center statistic-box shadow-lg p-4 bg-white rounded h-100">
                         <div class="flex-grow-1">
-                            <h3 class="display-4 statistic-counter" style="color: #CDB716FF;" data-count="100+" data-type="plus">0</h3>
+                            <h3 class="display-4 statistic-counter" style="color: #5D752AFF;" data-count="{{ $newCustomersThisMonth }}" data-type="number">
+                                {{ $newCustomersThisMonth }}
+                            </h3>
                             <p class="lead mb-0">Klien Baru tiap Bulan</p>
                         </div>
                         <div class="ms-3">
-                            <i class="fas fa-user fa-4x text-warning"></i>
+                            <i class="fas fa-user fa-4x text-success"></i>
                         </div>
                     </div>
                 </div>
