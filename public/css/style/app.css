@@ -9,27 +9,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    font-family: 'Arial', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
-.navbar {
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease, opacity 0.3s ease;
+.navbar-nav .nav-link {
+    color: #2A3663;
+    font-size: 1.1rem;
+    padding: 5px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.navbar-nav .nav-item .nav-link {
-    color: #000;
+.navbar-nav .nav-link:hover {
+    color: #FCC737;
+    transform: scale(1.1);
 }
 
-.navbar-nav .nav-item .nav-link.active {
-    color: #f39c12; 
+.navbar-nav .nav-link.active {
+    color: #FCC737;
     font-weight: bold;
+    border-bottom: 2px solid #FCC737;
 }
 
-.navbar-nav .nav-item .nav-link:focus {
-    color: #f39c12;
-    outline: none;
+.navbar-brand {
+    color: #2A3663;
+    font-size: 1.8rem;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #FCC737;
+}
+
+.navbar.scrolled {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .bg-light {
@@ -219,7 +235,7 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-    color: #f39c12;
+    color: #FCC737;
 }
 
 footer .d-flex a i {
@@ -229,7 +245,7 @@ footer .d-flex a i {
 
 footer .d-flex a:hover i {
     transform: scale(1.1);
-    color: #f39c12;
+    color: #FCC737;
 }
 
 footer .mt-4 p {
