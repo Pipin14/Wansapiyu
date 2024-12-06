@@ -46,6 +46,7 @@ class AboutUsResource extends Resource
                     ->directory('images/about_us')
                     ->visibility('public')
                     ->image()
+                    ->previewable(false)
                     ->required(),
             ]);
     }

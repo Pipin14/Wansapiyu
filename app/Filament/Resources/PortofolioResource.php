@@ -2,17 +2,20 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PortofolioResource\Pages;
-use App\Filament\Resources\PortofolioResource\RelationManagers;
-use App\Models\Portofolio;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Forms\Form;
+use App\Models\Portofolio;
 use Filament\Tables\Table;
+use Illuminate\Support\Str;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Illuminate\Support\Str;
+use App\Filament\Resources\PortofolioResource\Pages;
+use App\Filament\Resources\PortofolioResource\RelationManagers;
 
 class PortofolioResource extends Resource
 {
@@ -26,17 +29,18 @@ class PortofolioResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('judul')
+                TextInput::make('judul')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('deskripsi')
+                Textarea::make('deskripsi')
                     ->required()
                     ->maxLength(300),
-                Forms\Components\FileUpload::make('gambar_portofolio')
+                FileUpload::make('gambar_portofolio')
                     ->disk('public')
                     ->directory('images/portofolio')
                     ->visibility('public')
                     ->image()
+                    ->previewable(false)
                     ->label('Gambar Portofolio'),
             ]);
     }

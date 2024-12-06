@@ -39,8 +39,9 @@ class GaleriResource extends Resource
                 FileUpload::make('galeri_portofolio')
                     ->image()
                     ->disk('public')
-                    ->directory('galeri')
+                    ->directory('images/galeri')
                     ->visibility('public')
+                    ->previewable(false)
                     ->required(),
             ]);
     }

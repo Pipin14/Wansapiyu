@@ -67,6 +67,7 @@ class LayananResource extends Resource
                     ->directory('images/layanans')
                     ->visibility('public')
                     ->image()
+                    ->previewable(false)
                     ->columnSpan(2),
             ]);
     }

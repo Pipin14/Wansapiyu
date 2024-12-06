@@ -22,7 +22,7 @@
 <section class="py-5 bg-light" data-aos="fade-up" data-aos-delay="600">
     <div class="container text-center">
         <h2 class="display-4 font-weight-bold text-dark mb-4">Siapa Kami</h2>
-        <p class="lead text-muted mb-5">Di [Nama Perusahaan], kami bersemangat untuk menangkap esensi dari momen kehidupan yang paling berharga.</p>
+        <p class="lead text-muted mb-5">Di Wansapiyu, kami bersemangat untuk menangkap esensi dari momen kehidupan yang paling berharga.</p>
         <div class="row">
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
                 <h3 class="h5 text-primary mb-3">Visi Kami</h3>
@@ -37,7 +37,7 @@
                 <p class="text-muted">Kami berjanji untuk memberikan layanan yang luar biasa, gambar berkualitas tinggi, dan pengalaman yang tak terlupakan, menjadikan kenangan Anda abadi.</p>
             </div>
         </div>
-        <a href="{{ route('about.us') }}" class="btn btn-primary btn-lg mt-4" data-aos="fade-up" data-aos-delay="600">Pelajari Lebih Lanjut Tentang Kami</a>
+        <a href="{{ route('about.us') }}" class="btn btn-primary btn-lg mt-4" data-aos="fade-up" data-aos-delay="600">Selengkapnya Tentang Kami</a>
     </div>
 </section>
 

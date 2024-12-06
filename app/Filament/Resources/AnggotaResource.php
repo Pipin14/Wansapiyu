@@ -40,6 +40,9 @@ class AnggotaResource extends Resource
                 FileUpload::make('photo')
                     ->label('Foto')
                     ->image()
+                    ->disk('public')
+                    ->previewable(false)
+                    ->directory('images/anggota')
                     ->visibility('public')
                     ->default('/images/default-user.png'),
                 TextInput::make('linkedin')

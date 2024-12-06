@@ -17,8 +17,9 @@
                     <a href="{{ route('layanan') }}" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
                         <i class="bi bi-arrow-left-circle me-2"></i> Kembali ke Layanan
                     </a>
-                    <a href="{{ route('contact.us') }}" class="btn btn-primary btn-lg d-flex align-items-center">
-                        <i class="bi bi-chat-dots me-2"></i> Hubungi Kami
+                    <a href="https://wa.me/6281386040075?text=Halo,%20saya%20ingin%20bertanya%20tentang%20layanan%20fotografi?"
+                        class="btn btn-success btn-lg d-flex align-items-center" target="_blank">
+                        <i class="bi bi-whatsapp me-2"></i> Hubungi Kami
                     </a>
                 </div>
                 <div class="mt-4 text-center">
