@@ -34,9 +34,14 @@ class FrontendController extends Controller
     public function portofolio()
     {
         $portofolios = Portofolio::all();
-        $averageRating = number_format(Testimonial::avg('rating'), 1);
+        $totalCustomers = Customer::count();
+        $averageRating = Testimonial::average('rating');
 
-        return view('frontend.portofolio', compact('portofolios', 'averageRating'));
+        $newCustomersThisMonth = Customer::whereMonth('created_at', Carbon::now()->month)
+            ->whereYear('created_at', Carbon::now()->year)
+            ->count();
+
+        return view('frontend.portofolio', compact('portofolios', 'averageRating', 'totalCustomers', 'newCustomersThisMonth'));
     }
 
     public function aboutUs()
