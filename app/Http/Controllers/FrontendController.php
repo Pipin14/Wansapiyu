@@ -10,24 +10,18 @@ use App\Models\Anggota;
 use App\Models\Layanan;
 use App\Models\Customer;
 use App\Models\Portofolio;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class FrontendController extends Controller
 {
     public function index()
     {
         $portofolios = Portofolio::all();
-        // if (!$portofolios) {
-        //     return redirect()->back()->with('error', 'Data tidak ditemukan.');
-        // }
+        $testimonials = Testimonial::latest()->take(6)->get();
 
-        // if ($portofolios->isEmpty()) {
-        //     return view('portofolios.index', ['portofolios' => []])
-        //         ->with('error', 'Tidak ada data portofolio.');
-        // }
-
-
-        return view('frontend.home', compact('portofolios'));
+        return view('frontend.home', compact('portofolios', 'testimonials'));
     }
 
     public function layanan()
@@ -40,8 +34,9 @@ class FrontendController extends Controller
     public function portofolio()
     {
         $portofolios = Portofolio::all();
+        $averageRating = number_format(Testimonial::avg('rating'), 1);
 
-        return view('frontend.portofolio', compact('portofolios'));
+        return view('frontend.portofolio', compact('portofolios', 'averageRating'));
     }
 
     public function aboutUs()
@@ -59,7 +54,25 @@ class FrontendController extends Controller
         return view('frontend.contact-us', compact('faqs'));
     }
 
+    public function submitUlasan(Request $request)
+    {
+        $validated = $request->validate([
+            'nama_klien' => 'required|string|max:255',
+            'ulasan' => 'required|string|max:300',
+            'rating' => 'required|integer|between:1,5',
+        ]);
 
+        // dd($validated);
+        Log::info('Data yang diterima: ', $validated);
+
+        Testimonial::create([
+            'nama_klien' => $validated['nama_klien'],
+            'ulasan' => $validated['ulasan'],
+            'rating' => $validated['rating'],
+        ]);
+
+        return redirect()->back()->with('success', 'Ulasan Anda berhasil dikirim!');
+    }
     // public function showAchievements()
     // {
     //     $totalClients = Customer::count();
