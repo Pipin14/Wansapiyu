@@ -23,8 +23,8 @@ class CustomerChart extends ChartWidget
                 [
                     'label' => 'Customer Orders',
                     'data' => array_values($customerData),
-                    'backgroundColor' => '#36A2EB',
-                    'borderColor' => '#9BD0F5',
+                    'backgroundColor' => '#9EDF9C',
+                    'borderColor' => '#9EDF9C',
                 ],
             ],
             'labels' => array_map(function ($month) {

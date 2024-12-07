@@ -4,6 +4,7 @@ namespace App\Filament\Pages;
 
 use Filament\Pages\Page;
 use App\Filament\Widgets\CustomerChart;
+use App\Filament\Widgets\StatsAdminOverview;
 
 class Dashboard extends Page
 {
@@ -12,6 +13,9 @@ class Dashboard extends Page
 
     protected function getWidgets(): array
     {
-        return [];
+        return [
+            CustomerChart::class,
+            StatsAdminOverview::class,
+        ];
     }
 }
