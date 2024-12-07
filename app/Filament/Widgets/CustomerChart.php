@@ -7,7 +7,9 @@ use App\Models\Customer;
 
 class CustomerChart extends ChartWidget
 {
-    protected static ?string $heading = 'Total Order Chart';
+    protected static ?string $heading = 'Total Customer Chart';
+
+    protected static ?int $sort = 2;
 
     protected function getData(): array
     {
@@ -19,7 +21,7 @@ class CustomerChart extends ChartWidget
         return [
             'datasets' => [
                 [
-                    'label' => 'Orders',
+                    'label' => 'Customer Orders',
                     'data' => array_values($customerData),
                     'backgroundColor' => '#36A2EB',
                     'borderColor' => '#9BD0F5',
