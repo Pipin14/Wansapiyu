@@ -60,7 +60,6 @@
     <section class="py-5" style="background-color: #f8f9fa; background: transparent;">
         <div class="container">
             <h2 class="h3 mb-4 text-center" style="font-size: 2.5rem;" data-aos="fade-in" data-aos-delay="500">Klien Kami</h2>
-
             <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="300">Telah dipercaya oleh ratusan mahasiswa dari berbagai Universitas terkemuka di Indonesia.</p>
             <div class="row">
                 <div class="col-12">
@@ -112,6 +111,7 @@
     <section class="py-5" style="background-color: #f8f9fa;">
         <div class="container">
             <h2 class="h3 mb-4 text-center" data-aos="fade-up" data-aos-delay="500" style="font-size: 2.5rem;">Pencapaian Kami</h2>
+            <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="500">Dengan penuh rasa bangga dan kepuasan, kami mencapai pencapaian yang luar biasa.</p>
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="d-flex align-items-center statistic-box shadow-lg p-4 bg-white rounded h-100">
@@ -154,7 +154,7 @@
                             <p class="lead mb-0">Klien Baru tiap Bulan</p>
                         </div>
                         <div class="ms-3">
-                            <i class="fas fa-user fa-4x text-success"></i>
+                            <i class="fas fa-user-plus fa-4x text-success"></i>
                         </div>
                     </div>
                 </div>

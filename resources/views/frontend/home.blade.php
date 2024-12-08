@@ -22,24 +22,34 @@
 <section class="py-5 bg-light" data-aos="fade-up" data-aos-delay="600">
     <div class="container text-center">
         <h2 class="display-4 font-weight-bold text-dark mb-4">Siapa Kami</h2>
-        <p class="lead text-muted mb-5">Di [Nama Perusahaan], kami bersemangat untuk menangkap esensi dari momen kehidupan yang paling berharga.</p>
+        <p class="lead text-muted mb-5">Di Wansapiyu, kami bersemangat untuk menangkap esensi dari momen kehidupan yang paling berharga.</p>
         <div class="row">
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-                <h3 class="h5 text-primary mb-3">Visi Kami</h3>
+                <div class="text-center mb-3">
+                    <i class="fas fa-eye fa-3x text-warning"></i> <!-- Ganti dengan ikon sesuai kebutuhan -->
+                </div>
+                <h3 class="h5 text-primary fw-semibold -bottom-1mb-3">Visi Kami</h3>
                 <p class="text-muted">Menjadi penyedia layanan fotografi terkemuka, dikenal karena kreativitas, profesionalisme, dan kemampuan untuk menangkap momen hidup yang paling berharga.</p>
             </div>
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-                <h3 class="h5 text-primary mb-3">Keahlian Kami</h3>
+                <div class="text-center mb-3">
+                    <i class="fas fa-camera-retro fa-3x text-warning"></i> <!-- Ganti dengan ikon sesuai kebutuhan -->
+                </div>
+                <h3 class="h5 text-primary fw-semibold mb-3">Keahlian Kami</h3>
                 <p class="text-muted">Kami mengkhususkan diri dalam berbagai layanan fotografi, termasuk pernikahan, potret, acara, dan sesi foto kreatif yang disesuaikan dengan kebutuhan Anda.</p>
             </div>
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-                <h3 class="h5 text-primary mb-3">Janji Kami</h3>
+                <div class="text-center mb-3">
+                    <i class="fas fa-thumbs-up fa-3x text-warning"></i>
+                </div>
+                <h3 class="h5 text-primary fw-semibold mb-3">Janji Kami</h3>
                 <p class="text-muted">Kami berjanji untuk memberikan layanan yang luar biasa, gambar berkualitas tinggi, dan pengalaman yang tak terlupakan, menjadikan kenangan Anda abadi.</p>
             </div>
         </div>
-        <a href="{{ route('about.us') }}" class="btn btn-primary btn-lg mt-4" data-aos="fade-up" data-aos-delay="600">z Tentang Kami</a>
+        <a href="{{ route('about.us') }}" class="btn btn-primary btn-lg mt-4" data-aos="fade-up" data-aos-delay="600">Tentang Kami</a>
     </div>
 </section>
+
 
 <section class="py-5">
     <div class="container text-center">
@@ -71,7 +81,7 @@
                 <div class="card shadow-sm">
                     <div class="card-body">
                         <div class="icon mb-3">
-                            <i class="bi bi-people-fill text-primary" style="font-size: 2rem;"></i>
+                            <i class="bi bi-people-fill text-warning" style="font-size: 2rem;"></i>
                         </div>
                         <h5 class="card-title">Tim Berpengalaman</h5>
                         <p class="card-text">Fotografer kami memiliki bertahun-tahun pengalaman dan terampil dalam menangkap berbagai momen dengan profesionalisme.</p>
@@ -150,12 +160,12 @@
                 @endforeach
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span> -->
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span> -->
             </button>
         </div>
     </div>
