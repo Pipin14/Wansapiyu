@@ -35,13 +35,13 @@ class GaleriResource extends Resource
                     ->options(Portofolio::all()->pluck('judul', 'id'))
                     ->rules('required')
                     ->searchable(),
-                // ->relationship('portofolio', 'judul'),
                 FileUpload::make('galeri_portofolio')
                     ->image()
                     ->disk('public')
                     ->directory('images/galeri')
                     ->visibility('public')
                     ->previewable(false)
+                    ->columnSpan('3')
                     ->required(),
             ]);
     }

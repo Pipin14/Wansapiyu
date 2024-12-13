@@ -37,7 +37,7 @@ class UserResource extends Resource
                 TextInput::make('password')
                     ->password()
                     ->required()
-                    ->label('Password Pengguna')
+                    ->label('Password BaruPengguna')
                     ->dehydrateStateUsing(fn($state) => bcrypt($state))
                     ->autocomplete('new-password'),
             ]);

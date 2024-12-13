@@ -33,11 +33,13 @@ class FAQResource extends Resource
                     ->maxLength(255)
                     ->unique(ignoreRecord: true)
                     ->label('Pertanyaan FAQ')
+                    ->columnSpan(2)
                     ->autofocus(),
                 TextInput::make('jawaban')
                     ->required()
                     ->maxLength(255)
                     ->unique(ignoreRecord: true)
+                    ->columnSpan(2)
                     ->label('Jawaban FAQ'),
             ]);
     }

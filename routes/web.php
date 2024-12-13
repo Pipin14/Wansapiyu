@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\PortofolioController;
+use Illuminate\Support\Facades\Redirect;
 
 Route::get('/', [FrontendController::class, 'index'])->name('home');
 Route::get('/layanan', [FrontendController::class, 'layanan'])->name('layanan');
@@ -23,3 +24,7 @@ Route::get('/about-us', function () {
     return view('frontend.about-us', compact('aboutUsSections', 'anggotas'));
 })->name('about.us');
 Route::get('/contact-us', [FrontendController::class, 'contactUs'])->name('contact.us');
+
+Route::get('/admin/dashboard', function () {
+    return Redirect::to('/admin');
+});

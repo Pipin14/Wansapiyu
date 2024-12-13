@@ -9,6 +9,7 @@ use Filament\Tables\Table;
 use App\Models\Testimonial;
 use Illuminate\Support\Str;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
@@ -35,6 +36,15 @@ class TestimonialResource extends Resource
                 Textarea::make('ulasan')
                     ->required()
                     ->maxLength(300),
+                Select::make('rating')
+                    ->options([
+                        '5' => '5',
+                        '4' => '4',
+                        '3' => '3',
+                        '2' => '2',
+                        '1' => '1',
+                    ])
+                    ->native(false)
             ]);
     }
 
@@ -48,6 +58,8 @@ class TestimonialResource extends Resource
                 TextColumn::make('ulasan')
                     ->sortable()
                     ->formatStateUsing(fn($state) => Str::limit($state, 40)),
+                TextColumn::make('rating')
+                    ->sortable(),
             ])
             ->filters([
                 //

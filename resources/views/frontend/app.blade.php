@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style/app.css') }}?v=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
@@ -31,9 +33,29 @@
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('layanan') ? 'active' : '' }}" href="{{ route('layanan') }}">Layanan</a>
                     </li>
+
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link  {{ request()->is('layanan') ? 'active' : '' }}" href="#" id="layananDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Layanan <i class="bi bi-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="layananDropdown">
+                            <a class="dropdown-item {{ request()->is('layanan/fotografer') ? 'active' : '' }}" href="#">
+                                <i class="bi bi-camera"></i> Layanan Fotografer
+                            </a>
+                            <a class="dropdown-item {{ request()->is('layanan/mua') ? 'active' : '' }}" href="#">
+                                <i class="bi bi-brush"></i> Layanan Make Up Artist (MUA)
+                            </a>
+                            <a class="dropdown-item {{ request()->is('layanan/jasa-web') ? 'active' : '' }}" href="#">
+                                <i class="bi bi-laptop"></i> Layanan Pembuatan Jasa Web
+                            </a>
+                        </div>
+                    </li> -->
+
+
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('portofolio') ? 'active' : '' }}" href="{{ route('portofolio') }}">Portofolio</a>
                     </li>
@@ -63,20 +85,20 @@
                 <div class="col-md-3 mb-4">
                     <h5 class="text-uppercase mb-3">Contact Us</h5>
                     <ul class="list-unstyled">
-                        <li><i class="bi bi-telephone-fill"></i> <a href="tel:+123456789" class="text-light">+628987654321</a></li>
-                        <li><i class="bi bi-whatsapp"></i> <a href="tel:+123456789" class="text-light">+628987654321</a></li>
-                        <li><i class="bi bi-envelope-fill"></i> <a href="mailto:info@yourphotography.com" class="text-light">info@yourphotography.com</a></li>
-                        <li><i class="bi bi-geo-alt-fill"></i> 1234 Photography Street, Jakarta Pusat, Indonesia</li>
+                        <li><i class="bi bi-telephone-fill"></i> <a href="tel:+123456789" class="text-light">+62 813-8604-0075</a></li>
+                        <li><i class="bi bi-whatsapp"></i> <a href="tel:+123456789" class="text-light">+62 813-8604-0075</a></li>
+                        <!-- <li><i class="bi bi-envelope-fill"></i> <a href="mailto:info@yourphotography.com" class="text-light">info@yourphotography.com</a></li> -->
+                        <li><i class="bi bi-geo-alt-fill"></i> Jalan Panca Raya 01, Jakarta Pusat, Indonesia 10560</li>
                     </ul>
                 </div>
 
                 <div class="col-md-3 mb-4">
                     <h5 class="text-uppercase mb-3">Follow Us</h5>
                     <ul class="list-unstyled d-flex justify-content-center justify-content-md-start">
-                        <li><a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a></li>
+                        <!-- <li><a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a></li> -->
                         <li><a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a></li>
-                        <li><a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a></li>
-                        <li><a href="#" class="text-light"><i class="bi bi-youtube"></i></a></li>
+                        <!-- <li><a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a></li> -->
+                        <!-- <li><a href="#" class="text-light"><i class="bi bi-youtube"></i></a></li> -->
                     </ul>
                 </div>
 
