@@ -1,11 +1,18 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open sans', sans-serif;
     padding-top: 70px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+}
+
+h1, h2 {
+    font-family: 'Lora', serif;
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 a {
@@ -142,7 +149,7 @@ a {
 }
 
 .card-lamp-effect:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
     box-shadow: 0 0 5px rgba(0, 204, 255, 1), 0 0 10px rgba(0, 204, 255, 1), 0 0 20px rgba(0, 204, 255, 1);
 }
 
@@ -150,14 +157,6 @@ a {
     transition: transform 0.3s ease;
 }
 
-h1, h2 {
-    font-family: 'Lora', serif;
-    font-weight: bold;
-}
-
-h2 {
-    font-size: 2rem;
-}
 
 .lead {
     font-size: 1.125rem;
@@ -300,11 +299,44 @@ footer .mt-4 p {
     }
 }
 
+
+/* whatsapp icon*/
+#whatsappIcon {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    margin-right: 10px;
+}
+
+#whatsappIcon a {
+    color: white;
+    text-decoration: none;
+}
+
+#whatsappIcon i {
+    font-size: 24px;
+}
+
+#whatsappIcon:hover {
+    background-color: #118B50;
+    transform: scale(1.05);
+}
+
 /* Gaya tombol utama */
 .btn-primary {
     display: inline-block;
-    padding: 0.5rem 1rem;  /* Mengurangi padding agar tombol lebih kecil */
-    font-size: 0.875rem;  /* Mengurangi ukuran font agar lebih kecil */
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
     font-weight: 600;
     color: #fff;
     background-color: #007bff;
@@ -323,8 +355,8 @@ footer .mt-4 p {
 
 .btn-success {
     display: inline-block;
-    padding: 0.5rem 1rem;  /* Mengurangi padding agar tombol lebih kecil */
-    font-size: 0.875rem;  /* Mengurangi ukuran font agar lebih kecil */
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
     font-weight: 600;
     color: #fff;
     background-color:rgb(7, 157, 7);
@@ -344,8 +376,8 @@ footer .mt-4 p {
 /* Gaya tombol light */
 .btn-light {
     display: inline-block;
-    padding: 0.5rem 1rem;  /* Mengurangi padding agar tombol lebih kecil */
-    font-size: 0.875rem;  /* Mengurangi ukuran font agar lebih kecil */
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
     font-weight: 600;
     color: #007bff;
     background-color: #f8f9fa;

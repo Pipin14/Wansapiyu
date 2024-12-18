@@ -6,8 +6,8 @@
 
     <section class="py-5 bg-light">
         <div class="container">
-            <h1 class="display-4 text-center mb-4" data-aos="fade-up">Portofolio Kami</h1>
-            <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="300">Lihat karya terbaik kami yang menangkap momen spesial dengan sempurna.</p>
+            <h2 class="display-4 text-center mb-4" data-aos="fade-up">Portofolio Kami</h2>
+            <p class="lead text-center mb-5" style="font-size: 1.01rem;" data-aos="fade-up" data-aos-delay="300">Lihat karya terbaik kami yang menangkap momen spesial dengan sempurna.</p>
             <div class="text-center mb-5" data-aos="zoom-in">
                 <h2 class="h3 mb-4" style="font-size: 2.5rem;">Kategori</h2>
                 <div class="row">
@@ -17,7 +17,7 @@
                             <img src="{{ asset('storage/' . $portofolio->gambar_portofolio) }}" class="card-img-top" alt="Gambar Portofolio">
                             <div class="card-body text-start">
                                 <h5 class="card-title">{{ $portofolio->judul }}</h5>
-                                <p class="card-text">{!! nl2br(e($portofolio->deskripsi)) !!}</p>
+                                <p class="card-text small">{!! nl2br(e($portofolio->deskripsi)) !!}</p>
                                 <a href="{{ route('portofolio.kategori', $portofolio->judul) }}" class="btn btn-primary">Lihat Selengkapnya</a>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
     <section class="py-5" style="background-color: #f8f9fa; background: transparent;">
         <div class="container">
             <h2 class="h3 mb-4 text-center" style="font-size: 2.5rem;" data-aos="fade-in" data-aos-delay="500">Klien Kami</h2>
-            <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="300">Telah dipercaya oleh ratusan mahasiswa dari berbagai Universitas terkemuka di Indonesia.</p>
+            <p class="lead text-center mb-5" style="font-size: 1.01rem;" data-aos="fade-up" data-aos-delay="300">Telah dipercaya oleh ratusan mahasiswa dari berbagai Universitas terkemuka di Indonesia.</p>
             <div class="row">
                 <div class="col-12">
                     <div class="marquee-container">
@@ -111,13 +111,13 @@
     <section class="py-5" style="background-color: #f8f9fa;">
         <div class="container">
             <h2 class="h3 mb-4 text-center" data-aos="fade-up" data-aos-delay="500" style="font-size: 2.5rem;">Pencapaian Kami</h2>
-            <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="500">Dengan penuh rasa bangga dan kepuasan, kami mencapai pencapaian yang luar biasa.</p>
+            <p class="lead text-center mb-5" style="font-size: 1.01rem;" data-aos="fade-up" data-aos-delay="500">Dengan penuh rasa bangga dan kepuasan, kami mencapai pencapaian yang luar biasa.</p>
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="d-flex align-items-center statistic-box shadow-lg p-4 bg-white rounded h-100">
                         <div class="flex-grow-1">
                             <h3 class="display-4 statistic-counter" style="color: #007bff;" data-count="{{ $totalCustomers }}" data-type="plus">{{ $totalCustomers > 0 ? $totalCustomers : 'N/A' }}</h3>
-                            <p class="lead mb-0">Proyek Selesai</p>
+                            <p class="lead mb-0" style="font-size: 1.01rem;">Proyek Selesai</p>
                         </div>
                         <div class="ms-3">
                             <i class="fas fa-tasks fa-4x text-primary"></i>
@@ -131,7 +131,7 @@
                                 <span class="statistic-counter rating" data-count="{{ $averageRating }}" data-type="number">0</span>
                                 <span style="font-size: 1.5rem; margin-left: 0.2rem;">/5</span>
                             </h3>
-                            <p class="lead mb-0">Kepuasan Klien</p>
+                            <p class="lead mb-0" style="font-size: 1.01rem;">Kepuasan Klien</p>
                         </div>
                         <div class="ms-3 d-flex justify-content-center align-items-center">
                             <div class="stars-rating">
@@ -151,7 +151,7 @@
                             <h3 class="display-4 statistic-counter" style="color: #5D752AFF;" data-count="{{ $newCustomersThisMonth }}" data-type="number">
                                 {{ $newCustomersThisMonth }}
                             </h3>
-                            <p class="lead mb-0">Klien Baru tiap Bulan</p>
+                            <p class="lead mb-0" style="font-size: 1.01rem;">Klien Baru tiap Bulan</p>
                         </div>
                         <div class="ms-3">
                             <i class="fas fa-user-plus fa-4x text-success"></i>

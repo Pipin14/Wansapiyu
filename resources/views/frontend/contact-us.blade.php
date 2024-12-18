@@ -7,14 +7,14 @@
     <div class="container">
         <div class="mb-5">
             <h2 class="display-4 text-primary text-center mb-4" data-aos="fade-up">Frequently Asked Questions</h2>
-            <p class="lead text-muted text-center mb-4" data-aos="fade-up" data-aos-delay="200">Kami tahu bahwa Anda mungkin memiliki beberapa pertanyaan. Di bawah ini adalah jawaban atas pertanyaan yang sering diajukan oleh pelanggan kami.</p>
+            <p class="lead text-muted text-center mb-4" style="font-size: 1.01rem;" data-aos="fade-up" data-aos-delay="200">Kami tahu bahwa Anda mungkin memiliki beberapa pertanyaan. Di bawah ini adalah jawaban atas pertanyaan yang sering diajukan oleh pelanggan kami.</p>
 
             <div class="accordion" id="faqAccordion">
                 @foreach($faqs as $index => $faq)
                 <div class="accordion-item" data-aos="fade-up" data-aos-delay="{{ 300 + ($index * 100) }}">
                     <h2 class="accordion-header" id="faqHeading{{ $loop->index }}">
-                        <button class="accordion-button {{ $loop->first ? '' : 'collapsed' }}" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse{{ $loop->index }}" aria-expanded="{{ $loop->first ? 'true' : 'false' }}" aria-controls="faqCollapse{{ $loop->index }}">
-                            {{ $faq->pertanyaan }}
+                        <strong> <button class="accordion-button {{ $loop->first ? '' : 'collapsed' }}" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse{{ $loop->index }}" aria-expanded="{{ $loop->first ? 'true' : 'false' }}" aria-controls="faqCollapse{{ $loop->index }}">
+                            {{ $faq->pertanyaan }}</strong>
                         </button>
                     </h2>
                     <div id="faqCollapse{{ $loop->index }}" class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}" aria-labelledby="faqHeading{{ $loop->index }}" data-bs-parent="#faqAccordion">
@@ -35,7 +35,7 @@
                     </div>
                     <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
                         <h2 class="h2 font-weight-bold text-black mb-4">Ulasan Anda</h2>
-                        <p class="lead mb-4">Kami ingin mendengar dari Anda! Seberapa puas Anda dalam menggunakan pelayanan jasa fotografi dari kami. Terima kasih</p>
+                        <p class="lead mb-4" style="font-size: 1.01rem;">Kami ingin mendengar dari Anda! Seberapa puas Anda dalam menggunakan pelayanan jasa fotografi dari kami. Terima kasih</p>
                         <div class="row">
                             <form action="{{ route('submit.ulasan') }}" method="POST">
                                 @csrf

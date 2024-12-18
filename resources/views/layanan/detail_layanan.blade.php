@@ -7,12 +7,13 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="1000">
-                <img src="{{ asset('storage/'.$layanan->gambar) }}" class="img-fluid rounded shadow-lg" alt="{{ $layanan->nama }}" style="object-fit: cover; height: 100%; width: 100%; object-position: top;">
+                <img src="{{ asset('storage/'.$layanan->gambar) }}" class="img-fluid rounded shadow-lg" alt="{{ $layanan->nama }}" style="object-fit: cover; height: 100%; width: 100%; object-position: top;" loading="lazy">
             </div>
             <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
                 <h2 class="display-4 mb-4 text-dark">{{ $layanan->nama }}</h2>
                 <p class="card-text mb-4">{!! nl2br(e($layanan->deskripsi)) !!}</p>
                 <p class="mb-4"><strong>Harga: <span class="text-primary">Rp {{ number_format($layanan->harga_paket, 0, ',', '.') }} </strong></span></p>
+                <!-- <p class="card-text"><strong>BCA - 012407138471093</strong></p> -->
                 <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
                     <a href="{{ route('layanan') }}" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
                         <i class="bi bi-arrow-left-circle me-2"></i> Kembali ke Layanan

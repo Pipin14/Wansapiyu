@@ -6,7 +6,7 @@
 <section class="py-5 bg-light">
     <div class="container">
         <h1 class="display-4 text-center mb-4" data-aos="fade-up">Tentang Kami</h1>
-        <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="200">
+        <p class="lead text-center mb-5" style="font-size: 1.01rem;" data-aos="fade-up" data-aos-delay="200">
             Kami adalah penyedia jasa fotografi profesional yang berdedikasi untuk menangkap momen terbaik Anda dengan penuh kreativitas dan kualitas tinggi.
         </p>
 
@@ -38,7 +38,7 @@
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
             <h2 class="h3 mb-4">Tim Kami</h2>
-            <p class="lead text-muted mb-5">Kami didukung oleh tim fotografer profesional yang berdedikasi tinggi, siap menangkap setiap momen berharga Anda dengan kualitas terbaik.</p>
+            <p class="lead text-muted mb-5" style="font-size: 1.01rem;">Kami didukung oleh tim fotografer profesional yang berdedikasi tinggi, siap menangkap setiap momen berharga Anda dengan kualitas terbaik.</p>
         </div>
         <div class="row justify-content-center">
             @foreach ($anggotas as $anggota)
