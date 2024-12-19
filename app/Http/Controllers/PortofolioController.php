@@ -12,7 +12,7 @@ class PortofolioController extends Controller
     public function index()
     {
         $portofolios = Portofolio::all();
-        $Galeri = Galeri::inRandomOrder()->limit(3)->get();
+        $Galeri = Galeri::all();
 
         return view('portofolio.index', compact('portofolios', 'Galeri'));
     }
@@ -31,7 +31,7 @@ class PortofolioController extends Controller
             return redirect()->back()->with('error', 'Galeri tidak ditemukan.');
         }
 
-        if ($galeris->count() < 3) {
+        if ($galeris->count() > 3) {
             $galeris = $galeris;
         } else {
             $galeris = $galeris->random(3);
